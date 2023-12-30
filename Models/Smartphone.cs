@@ -1,35 +1,30 @@
 namespace DesafioPOO.Models
 {
-    public abstract class Smartphone
+    public abstract class Smartphone // Transformar a classe em abstrata
     {
-        public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
-        // DONE
-        private string Modelo { get; set; }
-        private string IMEI { get; set; }
-        private int Memoria { get; set; }
+        public string Numero { get; set; } // Transformar as propriedades em públicas
+        private string Modelo { get; set; } // Transformar as propriedades em privadas
+        private string IMEI { get; set; } // Transformar as propriedades em privadas
+        private int Memoria { get; set; } // Transformar as propriedades em privadas
 
-
-        public Smartphone(string numero, string modelo, string imei, int memoria)
+        public Smartphone(string numero, string modelo, string imei, int memoria) // Criar um construtor para a classe
         {
-            this.Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
-            // DONE
-            this.Modelo = modelo;
-            this.IMEI = imei;
-            this.Memoria = memoria;
+            this.Numero = numero; // Atribuir os valores recebidos às propriedades
+            this.Modelo = modelo; // Atribuir os valores recebidos às propriedades
+            this.IMEI = imei; // Atribuir os valores recebidos às propriedades
+            this.Memoria = memoria; // Atribuir os valores recebidos às propriedades
         }
 
-        public void Ligar()
+        public void Ligar() // Criar um método para a classe
         {
             Console.WriteLine("Ligando...");
         }
 
-        public void ReceberLigacao()
+        public void ReceberLigacao() // Criar um método para a classe
         {
             Console.WriteLine("Recebendo ligação...");
         }
 
-        public abstract void InstalarAplicativo(string nomeApp);
+        public abstract void InstalarAplicativo(string nomeApp); // Criar um método abstrato para a classe
     }
 }

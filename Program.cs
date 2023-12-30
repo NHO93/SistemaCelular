@@ -1,21 +1,23 @@
 ﻿﻿using DesafioPOO.Models;
 
-// TODO: Realizar os testes com as classes Nokia e Iphone
-// DONE
-class Program
-{
-    public static void Main(string[] args)
-    {
-        Console.WriteLine(".......Nokia.......\n");
-        Nokia nk123 = new Nokia("000145", "NK123", "305460516516051651", 256); // TODO: Instanciar um Nokia
-        nk123.InstalarAplicativo("WhatsApp"); //  TODO: Instalar o WhatsApp
-        nk123.Ligar(); //   TODO: Ligar
-        nk123.ReceberLigacao(); //  TODO: Receber uma ligação
+// TRealizar os testes com as classes Nokia e Iphone
 
-        Console.WriteLine("\n.......Iphone......\n");
-        Iphone iphone5S = new Iphone("145000", "iphone5S", "1561506151615064503", 652); // TODO: Instanciar um Iphone
-        iphone5S.InstalarAplicativo("Instagram"); //    TODO: Instalar o Instagram
-        iphone5S.Ligar(); // TODO: Ligar
-        iphone5S.ReceberLigacao(); //   TODO: Receber uma ligação
+class Program
+{ protected Program() {} // Construtor protegido
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Smartphone Nokia: ");
+        Nokia nk123 = new Nokia(numero: "1234567891011", modelo: "NK123", imei: "305460516516051651", memoria: 256); // Instanciar um Nokia
+        nk123.InstalarAplicativo("WhatsApp"); // Instalar o aplicativo
+        nk123.Ligar(); // Ligar
+        nk123.ReceberLigacao(); // Receber uma ligação
+        
+        Console.WriteLine("\n.....................................\n");
+
+        Console.WriteLine("Smartphone iPhone: ");
+        Iphone iphone5S = new Iphone(numero: "01234567891112", modelo: "iphone5S", imei: "1561506151615064503", memoria: 652); // Instanciar um Iphone
+        iphone5S.InstalarAplicativo("Instagram"); // Instalar o aplicativo
+        iphone5S.Ligar(); //Ligar
+        iphone5S.ReceberLigacao(); // Receber uma ligação
     }
 }
